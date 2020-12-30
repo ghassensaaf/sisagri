@@ -330,14 +330,26 @@ $('.top-job-slider').slick({
     speed: 200
   });
 
-
-//17.  Progress barfiller
-
-  $('#bar1').barfiller();
-  $('#bar2').barfiller();
-  $('#bar3').barfiller();
-  $('#bar4').barfiller();
-  $('#bar5').barfiller();
-  $('#bar6').barfiller();
-
+  $(document).ready(function(){
+    $('.customer-logos2 ').slick({
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 1500,
+      arrows: false,
+      dots: false,
+      pauseOnHover: false,
+      responsive: [{
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 4
+        }
+      }, {
+        breakpoint: 520,
+        settings: {
+          slidesToShow: 3
+        }
+      }]
+    });
+  });
 })(jQuery);
